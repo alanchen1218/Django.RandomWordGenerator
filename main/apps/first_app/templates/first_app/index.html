@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'first_app/styles.css' %}">
+</head>
+<body>
+    <h1>
+        {{random}}
+    </h1>
+    <p>Random Word (attempt #{{request.session.counter}})</p>
+    <form action="/random_word">
+    <input type="submit" value="Generate"> 
+    </form>
+    <form action="/">
+    <input type="submit" value="Reset">
+    </form>
+</body>
+</html>
